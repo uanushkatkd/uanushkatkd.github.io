@@ -24,12 +24,15 @@
       flex-wrap: wrap;
     }
     .profile-pic {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #ddd;
-    }
+  width: 260px;        /* or 300px if you want bigger */
+  height: auto;        /* keep original aspect ratio */
+  border-radius: 8px;  /* slight rounding, not circle */
+  object-fit: contain; /* show full image, no cropping */
+  border: 1px solid #ddd;
+}
+.header-text {
+  flex: 1;
+}
     h1 {
       margin: 0;
       font-size: 2.4em;
@@ -89,25 +92,24 @@
 </head>
 <body>
   <div class="container">
-    <header>
-      <img src="profile.png" alt="Anushka Singh" class="profile-pic"/>
-      <div>
-        <h1>Anushka Singh</h1>
-        <p class="subtitle">Data Scientist • NLP & LLMs • ML Research</p>
-        <p>
-          I work on machine translation evaluation, LLM calibration, and applied ML systems.
-          Currently building and deploying ML models at SIXT and exploring confidence calibration
-          for multilingual medical QA.
-        </p>
-        <div class="links">
-          <a href="https://github.com/uanushkatkd" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/anushkasingh-gwl" target="_blank">LinkedIn</a>
-          <a href="https://scholar.google.com/citations?user=gLaYzZQAAAAJ&hl=en" target="_blank">Google Scholar</a>
-          <a href="mailto:anushka.singh.14.sept@gmail.com">Email</a>
-        </div>
-      </div>
-    </header>
-
+   <header>
+  <img src="profile.png" alt="Anushka Singh" class="profile-pic"/>
+  <div class="header-text">
+    <h1>Anushka Singh</h1>
+    <p class="subtitle">Data Scientist • NLP & LLMs • ML Research</p>
+    <p>
+      I work on machine translation evaluation, LLM calibration, and applied ML systems.
+      Currently building and deploying ML models at SIXT and exploring confidence calibration
+      for multilingual medical QA.
+    </p>
+    <div class="links">
+      <a href="https://github.com/uanushkatkd" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/anushkasingh-gwl" target="_blank">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=gLaYzZQAAAAJ&hl=en" target="_blank">Google Scholar</a>
+      <a href="mailto:anushka.singh.14.sept@gmail.com">Email</a>
+    </div>
+  </div>
+</header>
     <section>
       <h2>What I'm working on now</h2>
       <ul>
